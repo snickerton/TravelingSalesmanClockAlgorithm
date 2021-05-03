@@ -49,7 +49,7 @@ In this section, I also want to take a moment to highlight (or lowlight) one of 
 ## Verdict
 It sucks... kinda.
 
-Brute force is able to beat it if the number of points is below like 12. On the upside, the speed at which the "Clock path" is calculated is probably pretty darn fast compared to other algorithms. Off the top of my head, the time complexity is O(n) for geometry stuff (angles, average center), and O(nlogn) for sorting (angles in ascending/clockwise order). You also have to remember this outputs a non-intersecting solution; other algorithms at this time complexity and/or take sub-second calculation times probably can't say the same.
+Brute force is able to beat it if the number of points is below like 12. On the upside, the speed at which the "Clock path" is calculated is probably pretty darn fast compared to other algorithms. Off the top of my head, the time complexity is O(n) for geometry stuff (angles, average center), plus O(nlogn) for sorting (angles in ascending/clockwise order). You also have to remember this outputs a non-intersecting solution; other algorithms at this time complexity and/or take sub-second calculation times probably can't say the same.
 
 
 If I ever come back to this, I definitely want to try slapping 2-opt onto that bad boy and seeing how good the solution can get at a rapid rate. There's a bunch of interesting patterns and math stuff I found on how to improve the Clock path and why it sucks to begin with, but that's a write-up for another time.
