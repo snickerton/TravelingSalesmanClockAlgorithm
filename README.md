@@ -1,6 +1,6 @@
 # TSP Clock Algorithm
 
-I came up with my own Traveling Salesman Solution that creates a simple polygon (no intersecting sides) from a list of euclidean coordinate points. Then I spent a night demonstrating how bad it was.
+I came up with my own Traveling Salesman Solution that creates a simple polygon (no intersecting sides) from a list of euclidean coordinate points. Then I spent a night demonstrating how bad it was. *(Also, still doubting that this isn't a pre-existing solution that I just didn't find while googling)*
 
 ## Background
 
@@ -53,5 +53,4 @@ It mostly sucks.
 
 Brute force is able to beat it if the number of points is below like 12. On the upside, the speed at which the "Clock path" is calculated is probably pretty darn fast compared to other algorithms. Off the top of my head, the time complexity is O(n) for geometry stuff (angles, average center), plus O(nlogn) for sorting (angles in ascending/clockwise order). You also have to remember this outputs a non-intersecting solution; other algorithms at this time complexity and/or take sub-second calculation times probably can't say the same.
 
-
-If I ever come back to this, I definitely want to try slapping 2-opt onto that bad boy and seeing how good the solution can get at a rapid rate. There's a bunch of interesting patterns and math stuff I found on how to improve the Clock path and why it sucks to begin with, but that's a write-up for another time.
+If I ever come back to this, I definitely want to try slapping 2-opt onto that bad boy and seeing how good the solution can get at a rapid rate. There's a bunch of interesting patterns and math stuff I found on how to improve the Clock path and why it sucks to begin with, but that's a write-up for another time. In the same vein, it'd be cool to calculate most optimal (or best with current technology) paths and compare it to the clock algorithm and clock + 2opt. Another algorithm improvement idea I had was to generate curated lists of "centroids" and pick the best solution from those. Either way, I can now safely say 
