@@ -15,7 +15,7 @@ My ELI5 of Convex Hull:
 
 And to be fair, this is pretty cool and works great. But I couldn't figure out why my original idea wasn't as optimal:
 
-*Can't I just average the points, get a center, and then go clockwise around it and find my path?*
+*What if I just average the points, get a center, and then go clockwise around it and find my path?*
 
 ## Clock Algorithm Explanation
 *(Still doubting that this isn't a pre-existing solution which I somehow couldn't find while googling)*
@@ -34,7 +34,7 @@ The python program enclosed does the following:
 1) Generates N random points
 2) Solves using the Clock Algorithm
 3) Tries to beat it with brute force
-4) Graphs everything in a cute matplotlib with animations
+4) Graphs everything in a cute plot with animations
 5) Solves P=NP and collects a cool million dollars for me
 
 ![image4](https://raw.githubusercontent.com/snickerton/TravelingSalesmanClockAlgorithm/main/clock_tsp_demo.gif)
