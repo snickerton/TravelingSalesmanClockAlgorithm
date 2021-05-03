@@ -6,9 +6,12 @@ import math
 import BruteForce
 
 drawline = True
+try_brute_force = False
+show_animation = False
 animation_pause = .1
+point_labels_on = False
 
-NUMBER_OF_POINTS = 10
+NUMBER_OF_POINTS = 40
 POINTS_MAX_RANGE = 100
 rng = np.random.RandomState(1)
 x_values = rng.rand(NUMBER_OF_POINTS) * POINTS_MAX_RANGE
@@ -79,10 +82,8 @@ print(*lines[0])
 
 print("\n*************\nFINAL PATH: ", total_path_length)
 
-# this ended up being a hand picked brute force output from below
-human_guess = [0, 3, 7, 8, 1, 6, 4, 5, 2, 9]
-# this is a human optimized (basically two-opt algo) detangled version of the brute force selected above
-human_guess =0
+human_guess = [x for x in range(NUMBER_OF_POINTS)] + [0]
+print(human_guess)
 
 lis = []
 with open("BestPath.txt", "w") as f:
@@ -99,21 +100,24 @@ print("init bf with pl: ", bf.smallest_route)
 
 try:
     print("beginning try")
-    bf.brute_force(lis, coors.copy(), [x for x in range(len(coors))], .01)
+    if(try_brute_force):
+        bf.brute_force(lis, coors.copy(), [x for x in range(len(coors))], .01)
 except Exception as e:
     human_guess = eval(str(repr(e))[11:-2])
     print("Bot guess: ", human_guess)
 
-if human_guess == 0:
+if human_guess == [x for x in range(NUMBER_OF_POINTS)] + [0]:
     print("Bot was unable to find better solution than given one")
-    human_guess = [x for x in range(NUMBER_OF_POINTS)]
+    # human_guess = [x for x in range(NUMBER_OF_POINTS)]
 
 fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(15, 7))
 
 for ax in axes:
     ax.plot(x_values, y_values, 'o')
-    for i, txt in enumerate(point_labels):
-        ax.text(x_values[i], y_values[i], txt)
+
+    if (point_labels_on):
+        for i, txt in enumerate(point_labels):
+            ax.text(x_values[i], y_values[i], txt)
 
 plt.axes(axes[0])
 test = 0
@@ -127,8 +131,9 @@ if drawline == True:
         test += ds
         plt.plot([line[0][0], line[1][0]], [line[0][1], line[1][1]], label=ds)
         # plt.legend()
-        plt.pause(animation_pause)
-    plt.title("Path Len: " + str(total_path_length))
+        if(animation_pause):
+            plt.pause(animation_pause)
+    plt.title("Clock Algo: " + str(total_path_length))
 
     print(test)
     plt.axes(axes[1])
@@ -137,18 +142,20 @@ if drawline == True:
     for index in human_guess[1:]:
         point = coors[index]
         plt.plot([prev_point[0],point[0]], [prev_point[1], point[1]])
-        plt.pause(animation_pause)
+        if (animation_pause):
+            plt.pause(animation_pause)
         vector = np.subtract(point, prev_point)
         path2 += math.sqrt(vector[0] ** 2 + vector[1] ** 2)
         prev_point = point
 
     point = coors[human_guess[0]]
     plt.plot([prev_point[0], point[0]], [prev_point[1], point[1]])
-    plt.pause(animation_pause)
+    if (animation_pause):
+        plt.pause(animation_pause)
     vector = np.subtract(point, prev_point)
     path2 += math.sqrt(vector[0] ** 2 + vector[1] ** 2)
 
-    plt.title("Path Len: " + str(path2))
+    plt.title("Brute Force Limited: " + str(path2))
     plt.pause(animation_pause)
 
     print("FINAL PATH2: ", path2)
