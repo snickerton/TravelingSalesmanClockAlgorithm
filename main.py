@@ -6,12 +6,12 @@ import math
 import BruteForce
 
 drawline = True
-try_brute_force = False
-show_animation = False
+try_brute_force = True
+show_animation = True
 animation_pause = .1
 point_labels_on = False
 
-NUMBER_OF_POINTS = 40
+NUMBER_OF_POINTS = 11
 POINTS_MAX_RANGE = 100
 rng = np.random.RandomState(1)
 x_values = rng.rand(NUMBER_OF_POINTS) * POINTS_MAX_RANGE
