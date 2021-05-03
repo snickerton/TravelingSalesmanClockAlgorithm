@@ -15,7 +15,7 @@ My ELI5 of Convex Hull:
 
 And to be fair, this is pretty cool and works great. But I couldn't figure out why my original idea wasn't as optimal:
 
-*Can't I just average the points, get a center, and then go clockwise around it and find my path?*
+*What if I just average the points, get a center, and then go clockwise around it and find my path?*
 
 ## Clock Algorithm Explanation
 *(Still doubting that this isn't a pre-existing solution which I somehow couldn't find while googling)*
