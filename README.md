@@ -40,7 +40,7 @@ The python program enclosed does the following:
 `Final values in gif: Clock -> 287.9 | Brute Force Limited -> 284.2`
 
 
-In this section, I also want to take a moment to highlight (or lowlight) one of the more "wtf" things I've done in my life. In this program we run a recursive brute force method and then *stop the recursion* when we beat a pre-existing record. To "break;" out of the recursive function **AND** return a value (the new best path) I pulled the following move:
+II also want to take a moment to highlight (or lowlight) one of the more "wtf dumb/genius" things I've done in my life. In this program we run a recursive brute force method and then *stop the recursion* when we beat a pre-existing record. To "break;" out of the recursive function **AND** return a value (the new best path) I pulled the following move:
 1) If the new path length has reached the improvement threshold (i.e. we want anything that improves more than 1%)
 2) Raise an Exception and encode the return value *in the error message*
 3) Catch said Exception and use repr() to convert the message to a string
