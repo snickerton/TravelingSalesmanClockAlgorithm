@@ -47,7 +47,7 @@ In this section, I also want to take a moment to highlight (or lowlight) one of 
 6) Bingo bango, recursion dead, new path acquired, P=NP solved
 
 ## Verdict
-It sucks... kinda.
+It mostly sucks.
 
 Brute force is able to beat it if the number of points is below like 12. On the upside, the speed at which the "Clock path" is calculated is probably pretty darn fast compared to other algorithms. Off the top of my head, the time complexity is O(n) for geometry stuff (angles, average center), plus O(nlogn) for sorting (angles in ascending/clockwise order). You also have to remember this outputs a non-intersecting solution; other algorithms at this time complexity and/or take sub-second calculation times probably can't say the same.
 
