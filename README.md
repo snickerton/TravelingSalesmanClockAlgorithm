@@ -25,7 +25,7 @@ My ELI5 of the patented Tony Zhu Clock&trade; Algorithm:
 
 ![image3](https://raw.githubusercontent.com/snickerton/TravelingSalesmanClockAlgorithm/main/ezgif-2-a2838b4a6f42.gif)
 
-`Note: Gif is a hand-drawn estimate and probably isn't mathematically accurate`
+`Note: center point was eye-balled with sleep deprivation`
 
 ## The Python Application 
 The python program enclosed does the following:
