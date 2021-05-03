@@ -21,9 +21,33 @@ And to be fair, this is pretty cool and works great. But I couldn't figure out w
 My ELI5 of the patented Tony Zhu Clock&trade; Algorithm:
 1) Attach a clock hand to the centroid found
 2) The order which points hit the hand as it spins clockwise is your path
-3) Solve P=NP and collect my cool 1 million dollars
+3) Solve P=NP and collect a cool 1 million dollars
 
 ![image3](https://raw.githubusercontent.com/snickerton/TravelingSalesmanClockAlgorithm/main/ezgif-2-a2838b4a6f42.gif)
 
 ## The Python Application 
-I ended up making a 
+The python program enclosed does the following:
+1) Generates N random points
+2) Solves using the Clock Algorithm
+3) Tries to beat it with brute force
+4) Graphs everything in a cute matplotlib with animations
+5) Solves P=NP and collects a cool million dollars for me
+
+![image4](https://raw.githubusercontent.com/snickerton/TravelingSalesmanClockAlgorithm/main/clock_tsp_demo.gif)
+
+
+In this section, I also want to take a moment to highlight (or lowlight) one of the more "wtf" things I've done in my life. In this program we run a recursive brute force method and then *stop the recursion* when we beat a pre-existing record. To "break;" out of the recursive function **AND** return a value (the new best path) I pulled the following move:
+1) If new path length reached improvement threshold to stop recursion
+2) Raise an Exception and encode the return value *in the error message*
+3) Catch said Exception and use repr() to convert the message to a string
+4) Clean the string so it's just the payload
+5) Use eval() to make the python compiler evaluate the string as if it's code (an array)
+6) Bingo bango, recursion dead, new path acquired, P=NP solved
+
+## Verdict
+It sucks... kinda.
+
+Brute force is able to beat it if the number of points is below like 12. On the upside, the speed at which the "Clock path" is calculated is probably pretty darn fast compared to other algorithms. Off the top of my head, the time complexity is O(n) for geometry stuff (angles, average center), and O(nlogn) for sorting (angles in ascending/clockwise order). You also have to remember this outputs a non-intersecting solution; other algorithms at this time complexity and/or take sub-second calculation times probably can't say the same.
+
+
+If I ever come back to this, I definitely want to try slapping 2-opt onto that bad boy and seeing how good the solution can get at a rapid rate. There's a bunch of interesting patterns and math stuff I found on how to improve the Clock path and why it sucks to begin with, but that's a write-up for another time.
