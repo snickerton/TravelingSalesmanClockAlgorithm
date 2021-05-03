@@ -18,7 +18,7 @@ And to be fair, this is pretty cool and works great. But I couldn't figure out w
 *Can't I just average the points, get a center, and then go clockwise around it and find my path?*
 
 ## Clock Algorithm Explanation
-*(Still doubting that this isn't a pre-existing solution that I just didn't find while googling)*
+*(Still doubting that this isn't a pre-existing solution which I somehow couldn't find while googling)*
 
 My ELI5 of the patented Tony Zhu Clock&trade; Algorithm:
 1) Attach a clock hand to the centroid found
