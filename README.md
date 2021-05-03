@@ -34,7 +34,7 @@ The python program enclosed does the following:
 1) Generates N random points
 2) Solves using the Clock Algorithm
 3) Tries to beat it with brute force
-4) Graphs everything in a cute matplotlib with animations
+4) Graphs everything in a cute plot with animations
 5) Solves P=NP and collects a cool million dollars for me
 
 ![image4](https://raw.githubusercontent.com/snickerton/TravelingSalesmanClockAlgorithm/main/clock_tsp_demo.gif)
