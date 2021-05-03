@@ -1,6 +1,6 @@
 # TSP Clock Algorithm
 
-I came up with my own Traveling Salesman Solution that creates a simple polygon (no intersecting sides) from a list of euclidean coordinate points. Then I spent a night demonstrating how bad it was. *(Also, still doubting that this isn't a pre-existing solution that I just didn't find while googling)*
+I came up with my own Traveling Salesman Solution that creates a simple polygon (no intersecting sides) from a list of euclidean coordinate points. Then I spent a night demonstrating how bad it was. *(Still doubting that this isn't a pre-existing solution that I just didn't find while googling)*
 
 ## Background
 
