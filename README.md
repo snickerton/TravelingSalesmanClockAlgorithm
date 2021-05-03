@@ -24,7 +24,8 @@ My ELI5 of the patented Tony Zhu Clock&trade; Algorithm:
 3) Solve P=NP and collect a cool 1 million dollars
 
 ![image3](https://raw.githubusercontent.com/snickerton/TravelingSalesmanClockAlgorithm/main/ezgif-2-a2838b4a6f42.gif)
-`Note: Gif is a hand-drawn estimate and not mathematically correct`
+
+`Note: Gif is a hand-drawn estimate and probably isn't mathematically accurate`
 
 ## The Python Application 
 The python program enclosed does the following:
