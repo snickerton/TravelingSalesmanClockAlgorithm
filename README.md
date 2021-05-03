@@ -4,7 +4,7 @@ I came up with my own Traveling Salesman Solution that creates a simple polygon 
 
 ## Background
 
-Without going into too much background, it seemed intuitive (and ends up being mathematically correct) that an optimal path should not have intersecting paths. The [Convex Hull algorithm](http://web.mit.edu/course/other/urban_or_book/www/book/chapter6/6.4.7.html) is one I immediately found which took advantage of this. 
+Without going into too much background, it seemed intuitive (and ended up being mathematically correct) that an optimal path should not have intersecting paths. The [Convex Hull algorithm](http://web.mit.edu/course/other/urban_or_book/www/book/chapter6/6.4.7.html) is one I immediately found which took advantage of this. 
 
 My ELI5 of Convex Hull: 
 1) Find the smallest polygon with only convex corners that encloses all the points
