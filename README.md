@@ -42,7 +42,7 @@ The python program enclosed does the following:
 `Final values in gif: Clock -> 287.9 | Brute Force Limited -> 284.2`
 
 
-II also want to take a moment to highlight (or lowlight) one of the more "wtf dumb/genius" things I've done in my life. In this program we run a recursive brute force method and then *stop the recursion* when we beat a pre-existing record. To "break;" out of the recursive function **AND** return a value (the new best path) I pulled the following move:
+I also want to take a moment to highlight (or lowlight) one of the more "wtf dumb/genius" things I've done in my life. In this program we run a recursive brute force method and then *stop the recursion* when we beat a pre-existing record. To "break;" out of the recursive function **AND** return a value (the new best path) I pulled the following move:
 1) If the new path length has reached the improvement threshold (i.e. we want anything that improves more than 1%)
 2) Raise an Exception and encode the return value *in the error message*
 3) Catch said Exception and use repr() to convert the message to a string
@@ -53,6 +53,8 @@ II also want to take a moment to highlight (or lowlight) one of the more "wtf du
 ## Verdict
 It mostly sucks.
 
-Brute force is able to beat it if the number of points is below like 12. On the upside, the speed at which the "Clock path" is calculated is probably pretty darn fast compared to other algorithms. Off the top of my head, the time complexity is O(n) for geometry stuff (angles, average center), plus O(nlogn) for sorting (angles in ascending/clockwise order). You also have to remember this outputs a non-intersecting solution; other algorithms at this time complexity and/or take sub-second calculation times probably can't say the same.
+Brute force is able to beat it if the number of points is below like 12. It's definitely nowhere near cranking out optimal paths or local minima. On the upside, for the time it takes to output a path that doesn't intersect itself, the algorithm is probably pretty speedy compared to its peers. Off the top of my head, the time complexity is O(n) for geometry stuff (angles, average center), plus O(nlogn) for sorting (angles in ascending/clockwise order).
 
-If I ever come back to this, I definitely want to try slapping 2-opt onto that bad boy and seeing how good the solution can get at a rapid rate. There's a bunch of interesting patterns and math stuff I found on how to improve the Clock path and why it sucks to begin with, but that's a write-up for another time. In the same vein, it'd be cool to calculate most optimal (or best with current technology) paths and compare it to the clock algorithm and clock + 2opt. Another algorithm improvement idea I had was to generate curated lists of "centroids" and pick the best solution from those. Either way, I can now safely say 
+If I ever come back to this, I definitely want to try slapping 2-opt onto that bad boy and seeing how good the solution can get at a rapid rate. There's a bunch of interesting patterns and math stuff I found on how to improve the Clock path and why it sucks to begin with, but that's a write-up for another time. In the same vein, it'd be cool to calculate most optimal (or best with current technology) paths and compare it to the clock algorithm and clock + 2opt. Another algorithm improvement idea I had was to generate curated lists of "centroids" and pick the best solution from those. 
+
+To end the Readme on a cheesy note: I still have hope for the Clock algorithm, because even broken it can be right twice a day.
