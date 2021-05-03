@@ -1,6 +1,6 @@
 # TSP Clock Algorithm
 
-I came up with my own Traveling Salesman Solution that creates a simple polygon (no intersecting sides) from a list of euclidean coordinate points. Then I spent a night demonstrating how bad it was. *(Still doubting that this isn't a pre-existing solution that I just didn't find while googling)*
+I came up with my own Traveling Salesman Solution that creates a simple polygon (no intersecting sides) from a list of euclidean coordinate points. Then I spent a night demonstrating how bad it was.
 
 ## Background
 
@@ -18,6 +18,8 @@ And to be fair, this is pretty cool and works great. But I couldn't figure out w
 *Can't I just average the points, get a center, and then go clockwise around it and find my path?*
 
 ## Clock Algorithm Explanation
+*(Still doubting that this isn't a pre-existing solution that I just didn't find while googling)*
+
 My ELI5 of the patented Tony Zhu Clock&trade; Algorithm:
 1) Attach a clock hand to the centroid found
 2) The order which points hit the hand as it spins clockwise is your path
