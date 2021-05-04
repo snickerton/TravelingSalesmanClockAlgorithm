@@ -36,7 +36,6 @@ left_center = (0, center[1])
 coors = list(zip(x_values, y_values))
 print("Coordinates: ", str(coors))
 
-
 # find angle of left_center_point > center > point_in_coors
 for i, point in enumerate(coors):
     vector_center_to_point = np.subtract(point, center)
